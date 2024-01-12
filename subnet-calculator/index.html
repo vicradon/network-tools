@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap4.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Subnet Calculator App</h1>
+        <p>
+          This is a simple web app that helps you with your subnetting needs.
+        </p>
+      </div>
+    </div>
+
+    <div class="container lead">
+      <p>
+        There are usually two cases where you'd need to perform some subnetting
+        computation:
+      </p>
+      <ol>
+        <li>Given a subnet mask, calculate the resulting subnet ranges</li>
+        <li>Given a requirement for number of hosts, get the subnet mask</li>
+      </ol>
+    </div>
+
+    <div class="container mt-5">
+      <h2>Case 1: Subnet ranges from subnet mask</h2>
+
+      <form>
+        <div class="form-group">
+          <label for="case1IPAddressInput">IP Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="case1IPAddressInput"
+            placeholder="192.168.0.1"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subnetMaskInput">Subnet Mask</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subnetMaskInput"
+            placeholder="255.255.255.224"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class="container my-5">
+      <h2>
+        Case 2: Subnet ranges and subnet mask given number of hosts required
+      </h2>
+
+      <form id="subnetRangeAndMaskForm">
+        <div class="form-group">
+          <label for="case2IPAddressInput">IP Address</label>
+          <input
+            name="case2IPAddressInput"
+            type="text"
+            class="form-control"
+            id="case2IPAddressInput"
+            placeholder="192.168.0.1"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="numberOfHostsRequiredInput"
+            >Number of hosts required</label
+          >
+          <input
+            name="numberOfHostsRequiredInput"
+            type="number"
+            class="form-control"
+            id="numberOfHostsRequiredInput"
+            placeholder="500"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
